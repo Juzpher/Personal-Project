@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+:root {
+  /* Colors */
+  --color-primary: #f5f5f5;
+  --color-primary-dark: #1c252e;
+  --color-primary-effects: #ffffff;
+
+  --color-secondary: #dddddd;
+  --color-secondary-dark: #424b54;
+  --color-secondary-effects: #ffffff;
+
+  --color-accent: #007bff;
+  --color-accent-dark: #078dee;
+  --color-accent-effects: #0351ab;
+
+  --color-success: #28a745;
+  --color-success-dark: #00aa73;
+  --color-success-effects: #34ce57;
+
+  --color-warning: #ffc107;
+  --color-warning-dark: #f1a42d;
+  --color-warning-effects: #ffd700;
+
+  --color-critical: #dc3545;
+  --color-critical-dark: #ff4f4f;
+  --color-critical-effects: #ff7474;
+
+  --color-info: #44a5ff;
+  --color-info-dark: #0c66dc;
+  --color-info-effects: #08bdff;
+
+  --color-background: #f2f3f4;
+  --color-background-dark: #141a21;
+  --color-background-effects: #ffffff;
+
+  --color-shadow: #dddddd;
+  --color-shadow-dark: #141a21;
+  --color-shadow-effects: #000000;
+
+  --color-text: #343a40;
+  --color-text-dark: #ffffff;
+  --color-text-effects: #000000;
+
+  /* Custom Shadow */
+  --shadow-default: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-dark: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Custom Classes */
+@layer components {
+  /* Background Colors */
+  .bg-custom-primary {
+    @apply bg-[var(--color-primary)];
+  }
+  .bg-custom-primary-dark {
+    @apply bg-[var(--color-primary-dark)];
+  }
+  .bg-custom-primary-effects {
+    @apply bg-[var(--color-primary-effects)];
+  }
+
+  .bg-custom-secondary {
+    @apply bg-[var(--color-secondary)];
+  }
+  .bg-custom-secondary-dark {
+    @apply bg-[var(--color-secondary-dark)];
+  }
+  .bg-custom-secondary-effects {
+    @apply bg-[var(--color-secondary-effects)];
+  }
+
+  .bg-custom-accent {
+    @apply bg-[var(--color-accent)];
+  }
+  .bg-custom-accent-dark {
+    @apply bg-[var(--color-accent-dark)];
+  }
+  .bg-custom-accent-effects {
+    @apply bg-[var(--color-accent-effects)];
+  }
+
+  .bg-custom-success {
+    @apply bg-[var(--color-success)];
+  }
+  .bg-custom-success-dark {
+    @apply bg-[var(--color-success-dark)];
+  }
+  .bg-custom-success-effects {
+    @apply bg-[var(--color-success-effects)];
+  }
+
+  .bg-custom-warning {
+    @apply bg-[var(--color-warning)];
+  }
+  .bg-custom-warning-dark {
+    @apply bg-[var(--color-warning-dark)];
+  }
+  .bg-custom-warning-effects {
+    @apply bg-[var(--color-warning-effects)];
+  }
+
+  .bg-custom-critical {
+    @apply bg-[var(--color-critical)];
+  }
+  .bg-custom-critical-dark {
+    @apply bg-[var(--color-critical-dark)];
+  }
+  .bg-custom-critical-effects {
+    @apply bg-[var(--color-critical-effects)];
+  }
+
+  .bg-custom-info {
+    @apply bg-[var(--color-info)];
+  }
+  .bg-custom-info-dark {
+    @apply bg-[var(--color-info-dark)];
+  }
+  .bg-custom-info-effects {
+    @apply bg-[var(--color-info-effects)];
+  }
+
+  .bg-custom-background {
+    @apply bg-[var(--color-background)];
+  }
+  .bg-custom-background-dark {
+    @apply bg-[var(--color-background-dark)];
+  }
+  .bg-custom-background-effects {
+    @apply bg-[var(--color-background-effects)];
+  }
+
+  /* Text Colors */
+  .text-custom {
+    @apply text-[var(--color-text)];
+  }
+  .text-custom-dark {
+    @apply text-[var(--color-text-dark)];
+  }
+  .text-custom-effects {
+    @apply text-[var(--color-text-effects)];
+  }
+
+  /* Shadows */
+  .shadow-custom {
+    box-shadow: var(--shadow-default);
+  }
+  .shadow-custom-dark {
+    box-shadow: var(--shadow-dark);
+  }
+
+  /* Transitions */
+  .custom-transition {
+    @apply transition-all duration-300;
+  }
+  .custom-ease {
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+}
