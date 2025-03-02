@@ -1,4 +1,9 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
 
 :root {
   /* Colors */
@@ -40,7 +45,7 @@
 
   --color-text: #343a40;
   --color-text-dark: #ffffff;
-  --color-text-effects: #000000;
+  --color-text-effects: #078dee;
 
   /* Custom Shadow */
   --shadow-default: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -138,6 +143,10 @@
     @apply text-[var(--color-text-dark)];
   }
   .text-custom-effects {
+    @apply text-[var(--color-text-effects)];
+  }
+  /* Add this new hover variant */
+  .hover\:text-custom-effects:hover {
     @apply text-[var(--color-text-effects)];
   }
 

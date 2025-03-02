@@ -1,40 +1,16 @@
 import { Link } from "react-router-dom";
+import { Button } from "../../common/Button/button-variants";
 
-const DesktopNav = () => {
+const DesktopNav = ({ menuItems }) => {
   return (
     <nav>
       <ul className="flex items-center space-x-8">
         <li>
-          <Link
-            to="/"
-            className="text-custom dark:text-custom-dark hover:text-custom-accent dark:hover:text-custom-accent-dark custom-transition px-2 py-1"
-          >
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/about"
-            className="text-custom dark:text-custom-dark hover:text-custom-accent dark:hover:text-custom-accent-dark custom-transition px-2 py-1"
-          >
-            About
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/services"
-            className="text-custom dark:text-custom-dark hover:text-custom-accent dark:hover:text-custom-accent-dark custom-transition px-2 py-1"
-          >
-            Services
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/contact"
-            className="text-custom dark:text-custom-dark hover:text-custom-accent dark:hover:text-custom-accent-dark custom-transition px-2 py-1"
-          >
-            Contact
-          </Link>
+          {menuItems.map((item) => (
+            <Button variant="ghost" key={item.label}>
+              <Link to={item.path}>{item.label}</Link>
+            </Button>
+          ))}
         </li>
       </ul>
     </nav>
